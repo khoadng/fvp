@@ -81,6 +81,9 @@ class MdkVideoPlayer extends mdk.Player {
     onEvent.listen((ev) {
       _log.fine(
           '$hashCode player$nativeHandle onEvent: ${ev.category} - ${ev.detail} - ${ev.error}');
+      if (ev.category == 'render.video' && ev.detail == '1st_frame') {
+        streamCtl.add(VideoEvent(eventType: VideoEventType.firstFrameRendered));
+      }
       if (ev.category == "reader.buffering") {
         final pos = position;
         final bufLen = buffered();

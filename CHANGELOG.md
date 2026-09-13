@@ -1,3 +1,7 @@
+# 0.37.3+boorusama.1
+
+* Forward MDK's rendered-first-frame event to video_player.
+
 # 0.37.3
 
 * fix PrivacyInfo.xcprivacy for SPM

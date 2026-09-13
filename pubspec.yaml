@@ -1,6 +1,6 @@
 name: fvp
 description: video_player plugin and backend APIs. Support all desktop/mobile platforms with hardware decoders, optimal renders. Supports most formats via FFmpeg
-version: 0.37.3
+version: 0.37.3+boorusama.1
 homepage: https://github.com/wang-bin/fvp
 topics:
   - video
@@ -20,8 +20,16 @@ dependencies: # TODO: limit max version?
   logging: any
   path: any
   plugin_platform_interface: any
-  video_player: any
-  video_player_platform_interface: any
+  video_player:
+    git:
+      url: https://github.com/khoadng/packages.git
+      ref: boorusama
+      path: packages/video_player/video_player
+  video_player_platform_interface:
+    git:
+      url: https://github.com/khoadng/packages.git
+      ref: boorusama
+      path: packages/video_player/video_player_platform_interface
   path_provider: any
   http: any
 
