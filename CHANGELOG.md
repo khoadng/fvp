@@ -1,3 +1,7 @@
+# 0.37.3+boorusama.2
+
+* Stop writing the plugin version to stderr whenever global callbacks are registered.
+
 # 0.37.3+boorusama.1
 
 * Forward MDK's rendered-first-frame event to video_player.

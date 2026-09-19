@@ -94,9 +94,6 @@ FVP_EXPORT void MdkCallbacksRegisterPort(int64_t handle, void* post_c_object, in
                 return;
             }
         });
-#ifdef FVP_VERSION
-        clog << "fvp plugin version: " FVP_VERSION << endl;
-#endif
         return;
     }
     auto player = make_shared<Player>(handle);
